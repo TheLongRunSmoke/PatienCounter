@@ -1,0 +1,42 @@
+<resources>
+
+    <string name="app_name">Patien Counter</string>
+
+    <string name="surgery">surgery</string>
+
+    <string name="surgery_text">Хирургия</string>
+
+    <string name="trauma">Травма</string>
+
+    <string name="showButton">Показать статистику</string>
+
+    <string name="day">За день</string>
+
+    <string name="month">За месяц</string>
+
+    <string name="close">Закрыть</string>
+
+    <string name="addButton">Добавить</string>
+
+    <string name="dummy">" "</string>
+
+    <string name="ander17">До 17</string>
+
+    <string name="t1760">17 – 60</string>
+
+    <string name="over60">Старше 60</string>
+    <string name="ma">Медосмотр</string>
+    <string name="mih">На дому</string>
+    <string name="t_a17">До 17</string>
+    <string name="t_o60">Ст 60</string>
+    <string name="t_total">Всего</string>
+    <string name="t_dis">Заболевания</string>
+    <string name="t_ma">Медостмотр</string>
+    <string name="t_ch">Дет</string>
+    <string name="t_ad">Взр</string>
+    <string name="t_ih">На дому</string>
+    <string name="date">Дата</string>
+    <string name="del">"Для удаления последних данных, введите \"удалить\" "</string>
+    <string name="delb">Удалить</string>
+
+</resources>

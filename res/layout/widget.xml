@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/alert_light_frame"
+    android:contentDescription="@string/dummy"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/SurgeryRB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/Surgery"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/dummy"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/radiobutton_off_background" />
+
+        <TextView
+            android:id="@+id/Surgery_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/surgery_text"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TraumaRB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/Trauma"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/dummy"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/radiobutton_off_background" />
+
+        <TextView
+            android:id="@+id/Trauma_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trauma"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/MedicalAtentionRB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/MedicalAtention"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/dummy"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/radiobutton_off_background" />
+
+        <TextView
+            android:id="@+id/Ma_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:text="@string/ma"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Delimiter01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/dummy"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/bottom_bar" />
+
+    <LinearLayout
+        android:id="@+id/Ander17RB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/Ander17"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/dummy"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/radiobutton_off_background" />
+
+        <TextView
+            android:id="@+id/Ander17_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ander17"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/A1760RB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/A1760"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/dummy"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/radiobutton_off_background" />
+
+        <TextView
+            android:id="@+id/A1760_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t1760"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Over60RB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/Over60"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/dummy"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/radiobutton_off_background" />
+
+        <TextView
+            android:id="@+id/Over60_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/over60"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Delimiter02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/dummy"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/bottom_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/Expand"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/ImageExpand"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_gravity="right"
+                android:contentDescription="@string/dummy"
+                android:scaleType="fitXY"
+                android:src="@android:drawable/arrow_down_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/MedicalinhomeCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/Medicalinhome"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/dummy"
+                android:scaleType="fitXY"
+                android:src="@android:drawable/checkbox_off_background" />
+
+            <TextView
+                android:id="@+id/Mih_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mih"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Delimiter03"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/dummy"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/bottom_bar" />
+
+    <Button
+        android:id="@+id/AddButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/addButton" />
+
+    <Button
+        android:id="@+id/DaySum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="@string/day"
+        android:textColor="#000000" />
+
+</LinearLayout>
