@@ -14,7 +14,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -43,7 +42,7 @@ public class Widget extends AppWidgetProvider {
 
 		switch (sp.getInt("Type", 0)) {
 		case 3: {
-			Log.d("LOG", "Set medicalatention");
+			//Log.d("LOG", "Set medicalatention");
 			widgetView.setImageViewResource(R.id.MedicalAtention,
 					android.R.drawable.radiobutton_on_background);
 			widgetView.setImageViewResource(R.id.Surgery,
@@ -53,7 +52,7 @@ public class Widget extends AppWidgetProvider {
 			break;
 		}
 		case 2: {
-			Log.d("LOG", "Set trauma");
+			//Log.d("LOG", "Set trauma");
 			widgetView.setImageViewResource(R.id.MedicalAtention,
 					android.R.drawable.radiobutton_off_background);
 			widgetView.setImageViewResource(R.id.Trauma,
@@ -63,7 +62,7 @@ public class Widget extends AppWidgetProvider {
 			break;
 		}
 		case 1: {
-			Log.d("LOG", "Set surgery");
+			//Log.d("LOG", "Set surgery");
 			widgetView.setImageViewResource(R.id.MedicalAtention,
 					android.R.drawable.radiobutton_off_background);
 			widgetView.setImageViewResource(R.id.Surgery,
@@ -73,7 +72,7 @@ public class Widget extends AppWidgetProvider {
 			break;
 		}
 		case 0: {
-			Log.d("LOG", "Clear type");
+			//Log.d("LOG", "Clear type");
 			widgetView.setImageViewResource(R.id.MedicalAtention,
 					android.R.drawable.radiobutton_off_background);
 			widgetView.setImageViewResource(R.id.Surgery,
@@ -85,7 +84,7 @@ public class Widget extends AppWidgetProvider {
 		}
 		switch (sp.getInt("Age", 0)) {
 		case 3: {
-			Log.d("LOG", "Set over60");
+			//Log.d("LOG", "Set over60");
 			widgetView.setImageViewResource(R.id.Over60,
 					android.R.drawable.radiobutton_on_background);
 			widgetView.setImageViewResource(R.id.A1760,
@@ -95,7 +94,7 @@ public class Widget extends AppWidgetProvider {
 			break;
 		}
 		case 2: {
-			Log.d("LOG", "Set a1760");
+			//Log.d("LOG", "Set a1760");
 			widgetView.setImageViewResource(R.id.Over60,
 					android.R.drawable.radiobutton_off_background);
 			widgetView.setImageViewResource(R.id.A1760,
@@ -105,7 +104,7 @@ public class Widget extends AppWidgetProvider {
 			break;
 		}
 		case 1: {
-			Log.d("LOG", "Set ander 17");
+			//Log.d("LOG", "Set ander 17");
 			widgetView.setImageViewResource(R.id.Over60,
 					android.R.drawable.radiobutton_off_background);
 			widgetView.setImageViewResource(R.id.A1760,
@@ -115,7 +114,7 @@ public class Widget extends AppWidgetProvider {
 			break;
 		}
 		case 0: {
-			Log.d("LOG", "Clear age");
+			//Log.d("LOG", "Clear age");
 			widgetView.setImageViewResource(R.id.Over60,
 					android.R.drawable.radiobutton_off_background);
 			widgetView.setImageViewResource(R.id.A1760,
@@ -240,7 +239,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка хирургии
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.surge")) {
-			Log.d("LOG", "surgery tap");
+			//Log.d("LOG", "surgery tap");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -252,7 +251,7 @@ public class Widget extends AppWidgetProvider {
 				SharedPreferences sp = context.getSharedPreferences(
 						ConfigActivity.WIDGET_PREF, Context.MODE_PRIVATE);
 				if (sp.getInt("Type", 0) != 1) {
-					Log.d("LOG", "Type 1");
+					//Log.d("LOG", "Type 1");
 					Editor editor = sp.edit();
 					editor.putInt("Type", 1).commit();
 				}
@@ -263,7 +262,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка травмы
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.trauma")) {
-			Log.d("LOG", "trauma tap");
+			//Log.d("LOG", "trauma tap");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -275,7 +274,7 @@ public class Widget extends AppWidgetProvider {
 				SharedPreferences sp = context.getSharedPreferences(
 						ConfigActivity.WIDGET_PREF, Context.MODE_PRIVATE);
 				if (sp.getInt("Type", 0) != 2) {
-					Log.d("LOG", "Type 2");
+					//Log.d("LOG", "Type 2");
 					Editor editor = sp.edit();
 					editor.putInt("Type", 2).commit();
 				}
@@ -286,7 +285,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка медосмотра
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.medicalatention")) {
-			Log.d("LOG", "medicalatention tap");
+			//Log.d("LOG", "medicalatention tap");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -298,7 +297,7 @@ public class Widget extends AppWidgetProvider {
 				SharedPreferences sp = context.getSharedPreferences(
 						ConfigActivity.WIDGET_PREF, Context.MODE_PRIVATE);
 				if (sp.getInt("Type", 0) != 3) {
-					Log.d("LOG", "Type 3");
+					//Log.d("LOG", "Type 3");
 					Editor editor = sp.edit();
 					editor.putInt("Type", 3).commit();
 					editor.putInt("Mih", 0).commit();
@@ -311,7 +310,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка "менее 17"
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.ander17")) {
-			Log.d("LOG", "ander17 tap");
+			//Log.d("LOG", "ander17 tap");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -323,7 +322,7 @@ public class Widget extends AppWidgetProvider {
 				SharedPreferences sp = context.getSharedPreferences(
 						ConfigActivity.WIDGET_PREF, Context.MODE_PRIVATE);
 				if (sp.getInt("Age", 0) != 1) {
-					Log.d("LOG", "Age 1");
+					//Log.d("LOG", "Age 1");
 					Editor editor = sp.edit();
 					editor.putInt("Age", 1).commit();
 				}
@@ -334,7 +333,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка "от 17 до 60"
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.a1760")) {
-			Log.d("LOG", "a1760 tap");
+			//Log.d("LOG", "a1760 tap");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -346,7 +345,7 @@ public class Widget extends AppWidgetProvider {
 				SharedPreferences sp = context.getSharedPreferences(
 						ConfigActivity.WIDGET_PREF, Context.MODE_PRIVATE);
 				if (sp.getInt("Age", 0) != 2) {
-					Log.d("LOG", "Age 2");
+					//Log.d("LOG", "Age 2");
 					Editor editor = sp.edit();
 					editor.putInt("Age", 2).commit();
 				}
@@ -357,7 +356,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка "старше 60"
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.over60")) {
-			Log.d("LOG", "over60 tap");
+			//Log.d("LOG", "over60 tap");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -369,7 +368,7 @@ public class Widget extends AppWidgetProvider {
 				SharedPreferences sp = context.getSharedPreferences(
 						ConfigActivity.WIDGET_PREF, Context.MODE_PRIVATE);
 				if (sp.getInt("Age", 0) != 3) {
-					Log.d("LOG", "Age 3");
+					//Log.d("LOG", "Age 3");
 					Editor editor = sp.edit();
 					editor.putInt("Age", 3).commit();
 				}
@@ -380,7 +379,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка развертывания меню
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.expand")) {
-			Log.d("LOG", "tap expand");
+			//Log.d("LOG", "tap expand");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -392,11 +391,11 @@ public class Widget extends AppWidgetProvider {
 				SharedPreferences sp = context.getSharedPreferences(
 						ConfigActivity.WIDGET_PREF, Context.MODE_PRIVATE);
 				if (sp.getInt("Expand", 0) == 0) {
-					Log.d("LOG", "Expand 1");
+					//Log.d("LOG", "Expand 1");
 					Editor editor = sp.edit();
 					editor.putInt("Expand", 1).commit();
 				} else {
-					Log.d("LOG", "Expand 0");
+					//Log.d("LOG", "Expand 0");
 					Editor editor = sp.edit();
 					editor.putInt("Expand", 0).commit();
 				}
@@ -407,7 +406,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка "на дому"
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.mih")) {
-			Log.d("LOG", "tap mih");
+			//Log.d("LOG", "tap mih");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -419,11 +418,11 @@ public class Widget extends AppWidgetProvider {
 				SharedPreferences sp = context.getSharedPreferences(
 						ConfigActivity.WIDGET_PREF, Context.MODE_PRIVATE);
 				if (sp.getInt("Mih", 0) == 0) {
-					Log.d("LOG", "Mih 1");
+					//Log.d("LOG", "Mih 1");
 					Editor editor = sp.edit();
 					editor.putInt("Mih", 1).commit();
 				} else {
-					Log.d("LOG", "Mih 0");
+					//Log.d("LOG", "Mih 0");
 					Editor editor = sp.edit();
 					editor.putInt("Mih", 0).commit();
 				}
@@ -434,7 +433,7 @@ public class Widget extends AppWidgetProvider {
 		// Обработка добавления записи
 		if (intent.getAction().equalsIgnoreCase(
 				"com.tlrs.patiencounter.tap.add")) {
-			Log.d("LOG", "add tap");
+			//Log.d("LOG", "add tap");
 			int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 			Bundle extras = intent.getExtras();
 			if (extras != null) {
@@ -455,7 +454,7 @@ public class Widget extends AppWidgetProvider {
 					cv.put("type", sp.getInt("Type", 0));
 					cv.put("age", sp.getInt("Age", 0));
 					cv.put("spec", sp.getInt("Mih", 0));
-					Log.d("LOG_TAG", cv.toString());
+					//Log.d("LOG_TAG", cv.toString());
 					db.insert("Stat", null, cv);
 					dbHelper.close();
 					if (sp.getInt("Type", 0) != 0) {

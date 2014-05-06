@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,7 +28,7 @@ public class DeletDialog extends DialogFragment implements OnClickListener {
 	public void onClick(View v) {
 		if (((Button) v).getId() == R.id.btnYes) {
 			String temp = ((EditText)rv.findViewById(R.id.delfield)).getText().toString();
-			Log.d("LOG", temp);
+			//Log.d("LOG", temp);
 			if (temp.equalsIgnoreCase("Удалить")) {
 				DBHelper dbHelper = new DBHelper(getActivity());
 				SQLiteDatabase db = dbHelper.getWritableDatabase();

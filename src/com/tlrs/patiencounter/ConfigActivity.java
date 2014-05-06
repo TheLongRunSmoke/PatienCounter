@@ -17,7 +17,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -119,7 +118,7 @@ public class ConfigActivity extends FragmentActivity {
 	}
 
 	public void onClick(View v) {
-		Log.d("LOG", Integer.toString(v.getId()));
+		//Log.d("LOG", Integer.toString(v.getId()));
 		switch (v.getId()) {
 		case R.id.forDay: {
 			fillTable task = new fillTable(this, 1);
@@ -179,7 +178,7 @@ public class ConfigActivity extends FragmentActivity {
 				switch (inttime) {
 				case 1: { // День
 					publishProgress("");
-					String day = Integer.toString(dp.getDayOfMonth());
+					String day = String.format("%02d", dp.getDayOfMonth());
 					String[] date = { day + '.'
 							+ String.format("%02d", (month + 1)) + '.' + year };
 					data = new ArrayList<Map<String, Object>>(fromint.length);
@@ -213,7 +212,7 @@ public class ConfigActivity extends FragmentActivity {
 				switch (inttime) {
 				case 1: {
 					publishProgress("");
-					String day = Integer.toString(dp.getDayOfMonth());
+					String day = String.format("%02d", dp.getDayOfMonth());
 					String[] date = { day + '.'
 							+ String.format("%02d", (month + 1)) + '.' + year };
 					data = new ArrayList<Map<String, Object>>(fromint.length);
@@ -254,16 +253,16 @@ public class ConfigActivity extends FragmentActivity {
 			String rowdate = null;
 			Cursor c = db.query("Stat", null, "date = ?", date, null, null,
 					null);
-			Log.d("LOG_TAG", Integer.toString(c.getCount()));
+			//Log.d("LOG_TAG", Integer.toString(c.getCount()));
 			if ((c != null) & (c.getCount() != 0)) {
 				if (c.moveToFirst()) {
 					do {
 						int type = c.getInt(c.getColumnIndex("type"));
-						Log.d("LOG_TAG", "type = " + Integer.toString(type));
+						//Log.d("LOG_TAG", "type = " + Integer.toString(type));
 						int age = c.getInt(c.getColumnIndex("age"));
-						Log.d("LOG_TAG", "age = " + Integer.toString(age));
+						//Log.d("LOG_TAG", "age = " + Integer.toString(age));
 						int spec = c.getInt(c.getColumnIndex("spec"));
-						Log.d("LOG_TAG", "spec = " + Integer.toString(spec));
+						//Log.d("LOG_TAG", "spec = " + Integer.toString(spec));
 						rowdate = c.getString(c.getColumnIndex("date"));
 						switch (type) {
 						case 1: {
@@ -358,16 +357,16 @@ public class ConfigActivity extends FragmentActivity {
 			String rowdate = null;
 			Cursor c = db.query("Stat", null, "date = ?", date, null, null,
 					null);
-			Log.d("LOG_TAG", Integer.toString(c.getCount()));
+			//Log.d("LOG_TAG", Integer.toString(c.getCount()));
 			if ((c != null) & (c.getCount() != 0)) {
 				if (c.moveToFirst()) {
 					do {
 						int type = c.getInt(c.getColumnIndex("type"));
-						Log.d("LOG_TAG", "type = " + Integer.toString(type));
+						//Log.d("LOG_TAG", "type = " + Integer.toString(type));
 						int age = c.getInt(c.getColumnIndex("age"));
-						Log.d("LOG_TAG", "age = " + Integer.toString(age));
+						//Log.d("LOG_TAG", "age = " + Integer.toString(age));
 						int spec = c.getInt(c.getColumnIndex("spec"));
-						Log.d("LOG_TAG", "spec = " + Integer.toString(spec));
+						//Log.d("LOG_TAG", "spec = " + Integer.toString(spec));
 						rowdate = c.getString(c.getColumnIndex("date"));
 						switch (type) {
 						case 1: {
@@ -476,7 +475,7 @@ public class ConfigActivity extends FragmentActivity {
 					.setVisibility(View.VISIBLE);
 			((LinearLayout) mActivity.get().findViewById(R.id.progress))
 					.setVisibility(View.GONE);
-			Log.d("LOG", "Задача завершена");
+			//Log.d("LOG", "Задача завершена");
 		}
 
 	}
